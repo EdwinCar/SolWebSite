@@ -1,0 +1,6 @@
+{
+  "BaseUrl": "https://btbpsc00/ApiBackOffice/api/",
+  "BaseUrlBilling": "https://btbpsc00/BillingPase/api/",
+  "AuthUri": "account/validate",
+  "BusinessMembership": "membership/business/search"
+}

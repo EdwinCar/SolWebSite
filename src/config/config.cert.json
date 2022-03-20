@@ -1,0 +1,5 @@
+{
+  "BaseUrl": "https://devpsc00.bancred.com.bo/ApiBackOffice/api/",
+  "AuthUri": "account/validate",
+  "BusinessMembership": "membership/business/search"
+}
