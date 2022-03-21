@@ -1,0 +1,10 @@
+.footer-lg {
+  bottom: 0;
+  cursor: default;
+  height: 6em;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: #5D00AE;
+}

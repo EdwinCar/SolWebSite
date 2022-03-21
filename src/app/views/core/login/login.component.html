@@ -1,34 +1,48 @@
-<div class="container">
-  <div class="row justify-content-evenly">
+<div class="container-fluid">
+  <div class="row justify-content-between">
+    <div class="col-lg-7 d-flex justify-content-center">
+      <div class="card mt-5">
+        <img class="logo" src="../../../../assets/img/logo-soli.svg">
+      </div>
+    </div>
     <div class="col-lg-5">
-      <mat-card class="shadow-lg p-3 my-5 matcard">
+      <mat-card class="mat-elevation-z0">
         <div class="row">
           <div class="col-lg-12 p-5">
-            <mat-card-title class="text-center">Sistema de administración Soli</mat-card-title>
-            <mat-card-subtitle class="text-center">Bienvenido/a</mat-card-subtitle>
-            <form [formGroup]="loginGroup" (ngSubmit)="onLogin()">
+            <div class="text-center mt-3">
+              <mat-card-title class="h2">Sistema de administración Soli</mat-card-title>
+              <mat-card-subtitle class="h4">Bienvenido/a</mat-card-subtitle>
+            </div>
+            <hr class="mx-3">
+            <form [formGroup]="loginGroup" (ngSubmit)="onLogin()" class="mt-5">
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="name" class="text-muted">Matricula</label>
                   <input type="text" class="form-control form-control-user" name="userName" formControlName="userName" placeholder="Ingresa tu matricula" (ngModelChange)="authRequest.userName = $event.toUpperCase()" required>
-                  <footer *ngIf="loginGroup.get('userName')?.touched && loginGroup.get('userName')?.errors?.['required']" class="blockquote-footer text-light my-1">La matricula es obligatorio</footer>
+                  <footer *ngIf="loginGroup.get('userName')?.touched && loginGroup.get('userName')?.errors?.['required']" class="blockquote-footer text-danger my-1">La matricula es obligatorio</footer>
                 </div>
               </div>
+              <br>
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="name" class="text-muted">Contraseña</label>
                   <input type="text" class="form-control form-control-user" name="password" formControlName="password" placeholder="Ingresa tu contraseña" autocomplete="off" (ngModelChange)="onMaskPassword(passwordEvent)" #passwordEvent>
                 </div>
               </div>
-              <div class="form-row d-flex justify-content-end my-3">
-                <button mat-raised-button color="warn" type="submit" [disabled]="loginGroup.invalid">Ingresar</button>
+              <div class="form-row d-flex justify-content-center my-4 col-md-12">
+                <button mat-raised-button color="warn" class="col-md-12" type="submit" [disabled]="loginGroup.invalid">INGRESAR</button>
+              </div>
+              <div class="form-row">
+                <div class="form-group d-flex justify-content-end mt-3">
+                  <a class="a-cursor h6" (click)="onChangePassword()">
+                    <small class="font-italic change">Cambio de contraseña Segurinet</small>
+                  </a>
+                </div>
               </div>
             </form>
           </div>
         </div>
       </mat-card>
     </div>
-
-
   </div>
 </div>

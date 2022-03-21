@@ -30,6 +30,10 @@ export class LoginComponent implements OnInit {
     // const character = $event.value.split('').find(point => point !== '●');
   }
 
+  onChangePassword(): void {
+
+  }
+
   onBuildForm(): FormGroup {
     return this.formBuilder.group({
       userName: [this.authRequest.userName, [Validators.required, Validators.minLength(5), Validators.maxLength(10)]],

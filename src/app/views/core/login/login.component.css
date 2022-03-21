@@ -1,14 +1,51 @@
-
-.matcard {
-  background: linear-gradient(167.95deg, #0A84FF 0%, #5D00AE 100%);
-  border-color: #fff;
-  color: #fff;
-}
-
 .form-control-user {
   font-size: 1rem;
   border-radius: 2rem;
   padding: 0.6rem 0rem 0.6rem 1rem;
   background-color: #F0F0F0;
   border-color: #F0F0F0;
+}
+
+.card {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.logo {
+  height:20rem;
+  width:20rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.change:hover {
+  color: #FF4F10;
+  font-style: initial;
+  box-shadow: inherit;
+}
+
+@media (max-width: 990px) {
+  .logo {
+    height:13rem;
+    width:13rem;
+    transition: 2s ease-in-out;
+  }
+}
+
+@media (max-width: 870px) {
+  .logo {
+    height:9rem;
+    width:9rem;
+    transition: 2s ease-in-out;
+  }
+}
+
+@media (max-width: 570px) {
+  .logo {
+    height:5rem;
+    width:5rem;
+    transition: 2s ease-in-out;
+  }
 }

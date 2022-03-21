@@ -21,7 +21,7 @@
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  background: url("../../../../assets/img/ic_background1.png");
+  /* background: url("../../../../assets/img/ic_background1.png"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -71,3 +71,73 @@
     opacity: 1;
   }
 }
+
+.circle {
+  position: relative;
+  width: 100%;
+  background-color: #FFF;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.circle:before {
+  content: '';
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  border-radius: 50%;
+  background: linear-gradient(167.95deg, #0A84FF 0%, #5D00AE 100%);
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  z-index: 6;
+  transition: 1.8s ease-in-out;
+}
+
+@media (max-width: 990px) {
+  .circle {
+      min-height: 800px;
+      height: 100vh;
+  }
+
+  .circle:before {
+      width: 1500px;
+      height: 1500px;
+      left: 50%;
+      bottom: 70%;
+      transform: translateX(-50%);
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
+  }
+}
+
+@media (max-width: 870px) {
+  .circle {
+      min-height: 800px;
+      height: 100vh;
+  }
+
+  .circle:before {
+      width: 1500px;
+      height: 1500px;
+      left: 30%;
+      bottom: 68%;
+      transform: translateX(-50%);
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
+  }
+}
+
+@media (max-width: 570px) {
+    .circle {
+      padding: 1.5rem;
+    }
+
+    .circle:before {
+      bottom: 72%;
+      left: 50%;
+    }
+}
+
