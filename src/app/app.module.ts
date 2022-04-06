@@ -14,6 +14,8 @@ import { FooterComponent } from './views/core/component/footer/footer.component'
 import { SidebarComponent } from './views/core/component/sidebar/sidebar.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { BreadcrumbComponent } from './views/core/component/breadcrumb/breadcrumb.component';
+import { ProfileComponent } from './views/core/component/profile/profile.component';
 
 /**
  * Created by S73261 [Edwin Higberto Mamani Canaza] on 20/03/2022.
@@ -28,6 +30,8 @@ import { MatButtonModule } from '@angular/material/button';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
+    BreadcrumbComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

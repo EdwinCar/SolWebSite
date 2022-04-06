@@ -1,1 +1,88 @@
-<p>sidebar works!</p>
+<ul class="navbar-nav flex-column nav-gradient sidebar-dark sidebar" id="accordionSidebar">
+  <div class="row d-flex justify-content-center sidebar-title">
+    <i class="fas fa-tachometer-alt my-2"></i>
+  </div>
+  <hr class="sidebar-divider my-2" />
+  <div class="sidebar-heading my-0">Descripción</div>
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" [routerLink]="['/']">
+      <i class="fas fa-archway"></i>
+      <span>Inicio</span>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#goMembership" aria-expanded="true" aria-controls="goMembership">
+      <i class="far fa-building"></i>
+      <span>Afiliación</span>
+    </a>
+    <div class="collapse" id="goMembership" aria-labelledby="headMembership" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-head">Afiliación</h6>
+        <a class="collapse-item" [routerLink]="['/membership/rubros']" routerLinkActive="active">Rubros</a>
+        <a class="collapse-item" [routerLink]="['/membership/business']" routerLinkActive="active">Empresas recaudadoras</a>
+        <a class="collapse-item" [routerLink]="['/membership/services']" routerLinkActive="active">Servicios asociados</a>
+        <a class="collapse-item" [routerLink]="['/membership/channels']" routerLinkActive="active">Canales</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#goParameter" aria-expanded="true" aria-controls="goParameter">
+      <i class="fas fa-user-cog"></i>
+      <span>Parametrización</span>
+    </a>
+    <div class="collapse" id="goParameter" aria-labelledby="headParameter" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-head">Parametrización</h6>
+        <a class="collapse-item" [routerLink]="['/parametrization/maintenance']" routerLinkActive="active">Mantenimiento Tablas</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#goReport" aria-expanded="true" aria-controls="goReport">
+      <i class="fas fa-chart-pie"></i>
+      <span>Reportes</span>
+    </a>
+    <div class="collapse" id="goReport" aria-labelledby="headReport" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-head">Reportes</h6>
+        <a class="collapse-item" [routerLink]="['/reporting/transactions']" routerLinkActive="active">Transacciones PASE</a>
+        <a class="collapse-item" [routerLink]="['/reporting/payments']" routerLinkActive="active">Pagos realizados PASE</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#goConciliation" aria-expanded="true" aria-controls="goConciliation">
+      <i class="fas fa-handshake"></i>
+      <span>Conciliación</span>
+    </a>
+    <div class="collapse" id="goConciliation" aria-labelledby="headConciliation" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-head">Conciliación</h6>
+        <a class="collapse-item" [routerLink]="['/conciliations/chargeservice']" routerLinkActive="active">Cobro de
+          servicio</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#goBilling" aria-expanded="true" aria-controls="goBilling">
+      <i class="fas fa-receipt"></i>
+      <span> Facturación</span>
+    </a>
+    <div class="collapse" id="goBilling" aria-labelledby="headBilling" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+        <h6 class="collapse-head">Facturación</h6>
+        <a class="collapse-item" [routerLink]="['/billing/search']" routerLinkActive="active">Descarga de facturas</a>
+      </div>
+    </div>
+  </li>
+
+  <div class="text-center d-none d-md-inline">
+    <button class="rounded-circle border-0" id="sidebarToggle" (click)="onCollapseSidebar()"></button>
+  </div>
+</ul>

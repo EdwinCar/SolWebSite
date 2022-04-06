@@ -9,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  dateTime: string;
 
-  constructor() { }
+  constructor() {
+    const date: Date = new Date();
+    this.dateTime = date.getDate() + '/' + (date.getMonth() + 1) + '/' +
+    date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes();
+  }
 
   ngOnInit(): void {
   }

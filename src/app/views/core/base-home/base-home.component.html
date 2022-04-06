@@ -1,1 +1,15 @@
-<p>base-home works!</p>
+<div class="container-fluid p-0 container-main">
+  <app-header></app-header>
+  <div class="container-fluid p-0 container-section">
+    <div class="d-flex">
+      <app-sidebar></app-sidebar>
+      <div class="page-content">
+        <app-breadcrumb></app-breadcrumb>
+        <div class="container-fluid">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
